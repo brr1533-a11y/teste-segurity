@@ -49,7 +49,12 @@ Detalhes em `REVISAO-4.16.4.md`.
 
 **A quantidade do item da nota fiscal às vezes fica vazia.** Em Emissão e busca de NF-e › novo rascunho, o roteiro preenche nome, NCM, quantidade, unidade e preço do item. Em cerca de 1 de cada 3 rodadas, só a **quantidade** aparece vazia logo depois de digitada, e o rascunho é recusado com "Item fiscal incompleto". A janela é a única aberta, e os outros campos ficam certos.
 
-Não foi achado nenhum código que limpe esse campo, então a causa ainda não está provada. O próximo passo é observar o campo com um registro de eventos na janela. Pode afetar quem digita rápido.
+Não foi achado nenhum código que limpe esse campo, então a causa ainda não está provada.
+
+- **Isolado, não acontece:** com o campo vigiado (quem muda o valor, os eventos e a pilha da chamada), o formulário aberto e preenchido 25 vezes seguidas, numa sessão limpa, não falhou nenhuma vez.
+- **Na sequência completa do `expansao-browser`, acontece:** antes disso o roteiro liga o modo de campo com PIN, sincroniza e abre outros formulários, inclusive o orçamento, que usa a mesma lista de itens.
+
+A suspeita fica entre o modo de campo, a sincronização e a recuperação de rascunho da 4.2. O próximo passo é rodar a mesma vigilância dentro do `expansao-browser`. Pode afetar quem preenche a nota logo depois de usar o modo de campo.
 
 ## 5. O que não foi feito
 
