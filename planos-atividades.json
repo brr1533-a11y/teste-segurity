@@ -1,0 +1,29 @@
+{
+  "essential": {
+    "coffee": 99,
+    "cattle": 99,
+    "grains": 99,
+    "coffee+cattle": 99,
+    "coffee+grains": 99,
+    "cattle+grains": 99,
+    "coffee+cattle+grains": 99
+  },
+  "pro": {
+    "coffee": 199,
+    "cattle": 199,
+    "grains": 199,
+    "coffee+cattle": 199,
+    "coffee+grains": 199,
+    "cattle+grains": 199,
+    "coffee+cattle+grains": 199
+  },
+  "group": {
+    "coffee": 350,
+    "cattle": 350,
+    "grains": 350,
+    "coffee+cattle": 350,
+    "coffee+grains": 350,
+    "cattle+grains": 350,
+    "coffee+cattle+grains": 350
+  }
+}
